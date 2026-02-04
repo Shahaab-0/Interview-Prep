@@ -1,6 +1,13 @@
 
 function deepClone(value,seen = new WeakMap()) {
     if( value == null || typeof value != 'object') return value;
+    if (value instanceof Date) {
+        return new Date(value.getTime());
+    }
+    if (typeof value === "function") {
+        return value;
+    }
+
     let result = Array.isArray(value) ? [] : {};
     if (seen.has(value)) {
         return seen.get(value);

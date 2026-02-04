@@ -5,10 +5,11 @@ import MouseTracker from "./mouse-tracker/MouseTracker";
 import useCustomFetch from "./custom-use-fetch/useCustomFetch";
 import StepperForm from "./stepper-form/StepperForm";
 import useWindowDimension from "./window-dimension/useWindowDimension";
+// import LikeButton from "./like-button/LikeButton";
 
 
 function App() {
-  const {size} = useWindowDimension();
+  // const {size} = useWindowDimension();
   // const { fetchData, data, error,loading} = useCustomFetch()
 
   // useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
   //   // return clearInterval(interval);
   // },[])
   // console.log(loading, '<---fetching');
-    console.log(size, 'afewfew');
+    // console.log(size, 'afewfew');
     
 
   return (
@@ -27,6 +28,7 @@ function App() {
       <TrafficLight  /> */}
       {/* <MouseTracker /> */}
       {/* <StepperForm /> */}
+      <LikeButton />
    </div>
   );
 }
